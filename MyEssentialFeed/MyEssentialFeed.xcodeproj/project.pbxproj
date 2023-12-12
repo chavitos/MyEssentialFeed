@@ -14,6 +14,7 @@
 		DD4B12DD2B2781C90076FF4F /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B12DC2B2781C90076FF4F /* FeedLoader.swift */; };
 		DD4B12E02B2790B50076FF4F /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B12DF2B2790B50076FF4F /* RemoteFeedLoaderTests.swift */; };
 		DD4B12E32B27AC700076FF4F /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B12E22B27AC700076FF4F /* RemoteFeedLoader.swift */; };
+		DD4B13092B28AA6A0076FF4F /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B13082B28AA6A0076FF4F /* HTTPClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		DD4B12DC2B2781C90076FF4F /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 		DD4B12DF2B2790B50076FF4F /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
 		DD4B12E22B27AC700076FF4F /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
+		DD4B13082B28AA6A0076FF4F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				DD4B12E22B27AC700076FF4F /* RemoteFeedLoader.swift */,
+				DD4B13082B28AA6A0076FF4F /* HTTPClient.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD4B12E32B27AC700076FF4F /* RemoteFeedLoader.swift in Sources */,
+				DD4B13092B28AA6A0076FF4F /* HTTPClient.swift in Sources */,
 				DD4B12DD2B2781C90076FF4F /* FeedLoader.swift in Sources */,
 				DD4B12DB2B2781640076FF4F /* FeedItem.swift in Sources */,
 				DD4B12C52B24A94B0076FF4F /* MyEssentialFeed.docc in Sources */,

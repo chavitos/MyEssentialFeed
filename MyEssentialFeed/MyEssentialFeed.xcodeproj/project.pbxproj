@@ -52,7 +52,8 @@
 		DD4B12E22B27AC700076FF4F /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		DD4B13082B28AA6A0076FF4F /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		DD4B130A2B28AAA90076FF4F /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
-		DDA3F7E42B2B471A00EE4D63 /* MyEssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = MyEssentialFeed.xctestplan; path = MyEssentialFeedTests/MyEssentialFeed.xctestplan; sourceTree = SOURCE_ROOT; };
+		DD567A2A2B3114B900C85420 /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
+		DDA3F7E42B2B471A00EE4D63 /* MyEssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MyEssentialFeed.xctestplan; sourceTree = SOURCE_ROOT; };
 		DDA3F7E52B2B47A100EE4D63 /* URLSesstionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSesstionHTTPClientTests.swift; sourceTree = "<group>"; };
 		DDA3F7E82B2D017C00EE4D63 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		DDA3F7EA2B2D26F600EE4D63 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
@@ -90,6 +91,8 @@
 		DD4B12B62B24A94B0076FF4F = {
 			isa = PBXGroup;
 			children = (
+				DD567A2A2B3114B900C85420 /* CI.xctestplan */,
+				DDA3F7E42B2B471A00EE4D63 /* MyEssentialFeed.xctestplan */,
 				DD4B12C22B24A94B0076FF4F /* MyEssentialFeed */,
 				DD4B12CE2B24A94B0076FF4F /* MyEssentialFeedTests */,
 				DDA3F7F12B310F3900EE4D63 /* MyEssentialFeedAPIEndToEndTests */,
@@ -121,7 +124,6 @@
 		DD4B12CE2B24A94B0076FF4F /* MyEssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
-				DDA3F7E42B2B471A00EE4D63 /* MyEssentialFeed.xctestplan */,
 				DD4B130C2B28BB8A0076FF4F /* Feed API */,
 			);
 			path = MyEssentialFeedTests;

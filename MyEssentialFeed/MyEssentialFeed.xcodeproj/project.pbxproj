@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD4844432B3B4E2600F7EEA8 /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4844422B3B4E2600F7EEA8 /* CacheFeedUseCaseTests.swift */; };
 		DD4B12C52B24A94B0076FF4F /* MyEssentialFeed.docc in Sources */ = {isa = PBXBuildFile; fileRef = DD4B12C42B24A94B0076FF4F /* MyEssentialFeed.docc */; };
 		DD4B12CB2B24A94B0076FF4F /* MyEssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4B12C02B24A94B0076FF4F /* MyEssentialFeed.framework */; };
 		DD4B12D12B24A94B0076FF4F /* MyEssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4B12C32B24A94B0076FF4F /* MyEssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD4844422B3B4E2600F7EEA8 /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		DD4B12C02B24A94B0076FF4F /* MyEssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyEssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4B12C32B24A94B0076FF4F /* MyEssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyEssentialFeed.h; sourceTree = "<group>"; };
 		DD4B12C42B24A94B0076FF4F /* MyEssentialFeed.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MyEssentialFeed.docc; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD4844412B3B4E0900F7EEA8 /* Feed Cache */ = {
+			isa = PBXGroup;
+			children = (
+				DD4844422B3B4E2600F7EEA8 /* CacheFeedUseCaseTests.swift */,
+			);
+			path = "Feed Cache";
+			sourceTree = "<group>";
+		};
 		DD4B12B62B24A94B0076FF4F = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		DD4B12CE2B24A94B0076FF4F /* MyEssentialFeedTests */ = {
 			isa = PBXGroup;
 			children = (
+				DD4844412B3B4E0900F7EEA8 /* Feed Cache */,
 				DD4B130C2B28BB8A0076FF4F /* Feed API */,
 			);
 			path = MyEssentialFeedTests;
@@ -329,6 +340,7 @@
 			files = (
 				DDA3F7E62B2B47A100EE4D63 /* URLSesstionHTTPClientTests.swift in Sources */,
 				DD4B12E02B2790B50076FF4F /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
+				DD4844432B3B4E2600F7EEA8 /* CacheFeedUseCaseTests.swift in Sources */,
 				DDA3F7E92B2D017C00EE4D63 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

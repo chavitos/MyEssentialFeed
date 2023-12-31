@@ -46,6 +46,7 @@ Given the customer doesn't have connectivity
   And the cache is seven days old or more
  When the customer requests to see the feed
  Then the app should display an error message
+ 
 Given the customer doesn't have connectivity
   And the cache is empty
  When the customer requests to see the feed
@@ -119,7 +120,7 @@ Given the customer doesn't have connectivity
 
 ![Feed Loading Feature](feed_flowchart.png)
 ## Architecture
-![Feed Loading Feature](architecture.png)
+![Feed Loading Feature](	architecture.png)
 ## Model Specs
 ### Feed Image
 | Property      | Type                |

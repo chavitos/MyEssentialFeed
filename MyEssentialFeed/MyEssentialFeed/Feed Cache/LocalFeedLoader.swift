@@ -50,11 +50,15 @@ public final class LocalFeedLoader {
     }
     
     public func validateCache() {
-        store.retrieve { [unowned self] result in
+        store.retrieve { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
                 case .failure:
                     self.store.deleteCachedFeed { _ in }
-                default: break
+                case let .found(_, timestamp) where !self.validate(timestamp):
+                    self.store.deleteCachedFeed { _ in }
+                case .found, .empty: break
             }
         }
     }
@@ -62,6 +66,7 @@ public final class LocalFeedLoader {
     private var maxCacheAgeInDays: Int {
         return 7
     }
+    
     private func validate(_ timestamp: Date) -> Bool {
         guard let maxCacheAge = calendar.date(byAdding: .day, value: maxCacheAgeInDays, to: timestamp) else {
             return false

@@ -27,6 +27,17 @@ public final class CoreDataFeedStore: FeedStore {
         }
     }
     
+    deinit {
+        cleanUpReferencesToPersistentStores()
+    }
+
+    private func cleanUpReferencesToPersistentStores() {
+        context.performAndWait {
+            let coordinator = self.container.persistentStoreCoordinator
+            try? coordinator.persistentStores.forEach(coordinator.remove)
+        }
+    }
+    
     public func insert(_ feed: [LocalFeedImage], timestamp: Date, completion: @escaping InsertionCompletion) {
         perform { context in
             do {

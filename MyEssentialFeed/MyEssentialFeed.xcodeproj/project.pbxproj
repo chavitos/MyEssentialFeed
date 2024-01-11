@@ -50,6 +50,7 @@
 		DDA3F7F32B310F3900EE4D63 /* MyEssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA3F7F22B310F3900EE4D63 /* MyEssentialFeedAPIEndToEndTests.swift */; };
 		DDA3F7F42B310F3900EE4D63 /* MyEssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD4B12C02B24A94B0076FF4F /* MyEssentialFeed.framework */; };
 		DDC6DAA52B4DE0130053BC20 /* MyEssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDC6DA9D2B4DE0130053BC20 /* MyEssentialFeediOS.framework */; };
+		DDC6DAB52B504DFE0053BC20 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC6DAB42B504DFE0053BC20 /* FeedViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		DDC6DAA42B4DE0130053BC20 /* MyEssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyEssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC6DAB22B4DE0840053BC20 /* MyEssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MyEssentialFeediOS.xctestplan; sourceTree = "<group>"; };
 		DDC6DAB32B4DE3A40053BC20 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = "<group>"; };
+		DDC6DAB42B504DFE0053BC20 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +366,7 @@
 		DDC6DAA82B4DE0130053BC20 /* MyEssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				DDC6DAB42B504DFE0053BC20 /* FeedViewControllerTests.swift */,
 			);
 			path = MyEssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 					};
 					DDC6DAA32B4DE0130053BC20 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 					};
 				};
 			};
@@ -673,6 +677,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDC6DAB52B504DFE0053BC20 /* FeedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1074,6 +1079,7 @@
 		DDC6DAB02B4DE0130053BC20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;
@@ -1084,6 +1090,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1092,6 +1099,7 @@
 		DDC6DAB12B4DE0130053BC20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Y5KPADL48;

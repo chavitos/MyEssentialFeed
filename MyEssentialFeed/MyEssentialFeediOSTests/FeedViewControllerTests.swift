@@ -31,7 +31,8 @@ final class FeedViewController: UITableViewController {
     
     @objc func load() {
         refreshControl?.beginRefreshing()
-        loader?.load { _ in
+        loader?.load { [weak self] _ in
+            self?.refreshControl?.endRefreshing()
         }
     }
 }
@@ -78,26 +79,44 @@ final class FeedViewControllerTests: XCTestCase {
         sut.beginAppearanceTransition(true, animated: false)
         sut.endAppearanceTransition()
         XCTAssertEqual(sut.refreshControl?.isRefreshing, true)
-
-        sut.refreshControl?.endRefreshing()
+    }
+    
+    func test_viewIsAppearing_hidesLoadingIndicatorOnLoaderCompletion() {
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        
+        sut.beginAppearanceTransition(true, animated: false)
+        sut.endAppearanceTransition()
+        loader.completeFeedLoading()
+        
         XCTAssertEqual(sut.refreshControl?.isRefreshing, false)
     }
     
     //MARK: - Helpers
     
     private func makeSUT(file: StaticString = #file, line: UInt = #line) -> (sut: FeedViewController, loader: LoaderSpy) {
-            let loader = LoaderSpy()
-            let sut = FeedViewController(loader: loader)
-            trackForMemoryLeaks(loader, file: file, line: line)
-            trackForMemoryLeaks(sut, file: file, line: line)
-            return (sut, loader)
-        }
+        let loader = LoaderSpy()
+        let sut = FeedViewController(loader: loader)
+        trackForMemoryLeaks(loader, file: file, line: line)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return (sut, loader)
+    }
     
     class LoaderSpy: FeedLoader {
-        private(set) var loadCallCount = 0
+        private var completions = [(FeedLoader.Result) -> Void]()
+
+        var loadCallCount: Int {
+            return completions.count
+        }
         
         func load(completion: @escaping ((FeedLoader.Result) -> Void)) {
-            loadCallCount += 1
+            completions.append(completion)
+        }
+        
+        func completeFeedLoading() {
+            completions[0](.success([]))
+            
         }
     }
 }

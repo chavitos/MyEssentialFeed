@@ -111,6 +111,7 @@ Location</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="LAv-JO-pi5" id="HG0-np-2bQ"/>
+                                    <outlet property="feedImageContainer" destination="vGu-av-IIR" id="lXe-zs-9GL"/>
                                     <outlet property="feedImageView" destination="Cjc-pB-9rh" id="78h-Lj-YGl"/>
                                     <outlet property="locationContainer" destination="qoA-c3-gg2" id="ziv-0D-PAT"/>
                                     <outlet property="locationLabel" destination="deW-i6-U3d" id="ZSe-XX-FBR"/>

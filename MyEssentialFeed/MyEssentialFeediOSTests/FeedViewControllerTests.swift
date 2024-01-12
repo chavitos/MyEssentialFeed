@@ -17,7 +17,7 @@ final class FeedViewControllerTests: XCTestCase {
         
         XCTAssertEqual(loader.loadCallCount, 0)
         
-        startsiOS17ViewLifecycle(sut)
+        sut.simulateUserInitiatedFeedReload()
         
         XCTAssertEqual(loader.loadCallCount, 1, "Expected a loading request once view is loaded")
         
@@ -56,7 +56,7 @@ final class FeedViewControllerTests: XCTestCase {
         let image3 = makeImage(description: nil, location: nil)
         let (sut, loader) = makeSUT()
         
-        startsiOS17ViewLifecycle(sut)
+        sut.simulateUserInitiatedFeedReload()
         
         assertThat(sut, isRendering: [])
         
@@ -66,6 +66,19 @@ final class FeedViewControllerTests: XCTestCase {
         sut.simulateUserInitiatedFeedReload()
         loader.completeFeedLoading(with: [image0, image1, image2, image3], at: 1)
         assertThat(sut, isRendering: [image0, image1, image2, image3])
+    }
+    
+    func test_loadFeedCompletion_doesNotAlterCurrentRenderingStateOnError() {
+        let image0 = makeImage()
+        let (sut, loader) = makeSUT()
+        
+        sut.startsiOS17ViewLifecycle()
+        loader.completeFeedLoading(with: [image0], at: 0)
+        assertThat(sut, isRendering: [image0])
+        
+        sut.simulateUserInitiatedFeedReload()
+        loader.completeFeedLoadingWithError(at: 1)
+        assertThat(sut, isRendering: [image0])
     }
 
     //MARK: - Helpers
@@ -103,13 +116,6 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(cell.descriptionText, image.description, "Expected description text to be \(String(describing: image.description)) for image view at index (\(index)", file: file, line: line)
     }
     
-    private func startsiOS17ViewLifecycle(_ vc: FeedViewController) {
-        vc.loadViewIfNeeded()
-        vc.replaceRefreshControlWithFakeForiOS17Support()
-        vc.beginAppearanceTransition(true, animated: false)
-        vc.endAppearanceTransition()
-    }
-    
     private func makeImage(description: String? = nil, location: String? = nil, url: URL = URL(string: "http://any-url.com")!) -> FeedImage {
         return FeedImage(id: UUID(), description: description, location: location, url: url)
     }
@@ -128,6 +134,11 @@ final class FeedViewControllerTests: XCTestCase {
         func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
             completions[index](.success(feed))
         }
+        
+        func completeFeedLoadingWithError(at index: Int = 0) {
+            let error = NSError(domain: "an error", code: 0)
+            completions[index](.failure(error))
+        }
     }
 }
 
@@ -142,6 +153,13 @@ private extension FeedViewController {
         }
         
         refreshControl = fake
+    }
+    
+    func startsiOS17ViewLifecycle() {
+        loadViewIfNeeded()
+        replaceRefreshControlWithFakeForiOS17Support()
+        beginAppearanceTransition(true, animated: false)
+        endAppearanceTransition()
     }
     
     func simulateUserInitiatedFeedReload() {

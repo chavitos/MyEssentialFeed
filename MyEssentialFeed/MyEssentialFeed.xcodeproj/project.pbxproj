@@ -55,6 +55,7 @@
 		DDC6DAB82B50514C0053BC20 /* MyEssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD4B12C02B24A94B0076FF4F /* MyEssentialFeed.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DDC6DABC2B5052030053BC20 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA3F7E82B2D017C00EE4D63 /* XCTestCase+MemoryLeakTracking.swift */; };
 		DDE89C002B50ADA600DDBC51 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE89BFF2B50ADA600DDBC51 /* FeedViewController.swift */; };
+		DDE89C022B50CAAC00DDBC51 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE89C012B50CAAC00DDBC51 /* FeedImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +158,7 @@
 		DDC6DAB32B4DE3A40053BC20 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = "<group>"; };
 		DDC6DAB42B504DFE0053BC20 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 		DDE89BFF2B50ADA600DDBC51 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		DDE89C012B50CAAC00DDBC51 /* FeedImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -388,6 +390,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE89BFF2B50ADA600DDBC51 /* FeedViewController.swift */,
+				DDE89C012B50CAAC00DDBC51 /* FeedImageCell.swift */,
 			);
 			path = MyEssentialFeediOS;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE89C002B50ADA600DDBC51 /* FeedViewController.swift in Sources */,
+				DDE89C022B50CAAC00DDBC51 /* FeedImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

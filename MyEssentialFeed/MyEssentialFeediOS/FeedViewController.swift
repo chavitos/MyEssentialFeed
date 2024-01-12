@@ -91,7 +91,8 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        startTask(forRowAt: indexPath)
+        guard let feedCell = cell as? FeedImageCell else { return }
+        startTask(forCell: feedCell, at: indexPath)
     }
     
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
@@ -107,9 +108,7 @@ final public class FeedViewController: UITableViewController, UITableViewDataSou
         }
     }
     
-    private func startTask(forRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? FeedImageCell else { return }
- 
+    private func startTask(forCell cell: FeedImageCell, at indexPath: IndexPath) {
         let cellModel = tableModel[indexPath.row]
         
         tasks[indexPath] = imageLoader?.loadImageData(from: cellModel.url) { [weak cell] result in

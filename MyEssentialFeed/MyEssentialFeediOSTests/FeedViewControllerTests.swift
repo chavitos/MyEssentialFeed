@@ -18,7 +18,7 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(loader.loadFeedCallCount, 0)
         
         sut.startsiOS17ViewLifecycle()
-        XCTAssertEqual(loader.loadFeedCallCount, 1, "Expected a loading request once view is loaded")
+        XCTAssertEqual(loader.loadFeedCallCount, 1, "Expected a loading request once view is appearing")
         
         sut.simulateUserInitiatedFeedReload()
         XCTAssertEqual(loader.loadFeedCallCount, 2, "Expected another loading request once user initiates a reload")

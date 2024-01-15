@@ -289,6 +289,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		DD30B6802B5598EC00F2C08A /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD30B66E2B55953F00F2C08A /* Helpers */,
+				DD30B6772B55968A00F2C08A /* Controllers */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
 		DD3FEA082B465E1400DE562B /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -475,8 +484,7 @@
 		DDC6DAA82B4DE0130053BC20 /* MyEssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				DD30B66E2B55953F00F2C08A /* Helpers */,
-				DD30B6772B55968A00F2C08A /* Controllers */,
+				DD30B6802B5598EC00F2C08A /* Feed UI */,
 			);
 			path = MyEssentialFeediOSTests;
 			sourceTree = "<group>";

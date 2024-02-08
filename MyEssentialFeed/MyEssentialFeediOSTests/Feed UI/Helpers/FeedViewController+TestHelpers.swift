@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MyEssentialFeediOS
+@testable import MyEssentialFeediOS
 
 extension FeedViewController {
     func replaceRefreshControlWithFakeForiOS17Support() {

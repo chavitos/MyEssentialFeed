@@ -140,6 +140,7 @@ Location</string>
                         <connections>
                             <outlet property="dataSource" destination="6Mg-Xh-ji7" id="Dzb-iJ-bp8"/>
                             <outlet property="delegate" destination="6Mg-Xh-ji7" id="mgF-NM-DK7"/>
+                            <outlet property="prefetchDataSource" destination="6Mg-Xh-ji7" id="J97-l5-MPz"/>
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="elP-3w-RkX">

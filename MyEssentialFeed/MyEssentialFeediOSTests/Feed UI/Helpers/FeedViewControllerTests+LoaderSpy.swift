@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests+LoaderSpy.swift
+//  FeedUIIntegrationTests+LoaderSpy.swift
 //  MyEssentialFeediOSTests
 //
 //  Created by Tiago Chaves on 15/01/24.
@@ -9,7 +9,7 @@ import Foundation
 import MyEssentialFeed
 import MyEssentialFeediOS
 
-extension FeedViewControllerTests {
+extension FeedUIIntegrationTests {
     class LoaderSpy: FeedLoader, FeedImageDataLoader {
         // MARK: - FeedLoader
         private var feedRequests = [(FeedLoader.Result) -> Void]()

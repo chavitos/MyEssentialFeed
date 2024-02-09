@@ -191,6 +191,7 @@
 		DD56D2772B758AE60027D37D /* UIImageView+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		DD56D27B2B769E0E0027D37D /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
 		DD56D27E2B76A0980027D37D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		DD56D2802B76A0ED0027D37D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
 		DDA3F7E42B2B471A00EE4D63 /* MyEssentialFeed.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MyEssentialFeed.xctestplan; sourceTree = SOURCE_ROOT; };
 		DDA3F7E52B2B47A100EE4D63 /* URLSesstionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSesstionHTTPClientTests.swift; sourceTree = "<group>"; };
 		DDA3F7E82B2D017C00EE4D63 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -713,6 +714,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = DD4B12B62B24A94B0076FF4F;
 			productRefGroup = DD4B12C12B24A94B0076FF4F /* Products */;
@@ -918,6 +920,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DD56D27E2B76A0980027D37D /* en */,
+				DD56D2802B76A0ED0027D37D /* pt-BR */,
 			);
 			name = Feed.strings;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1033,6 +1037,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

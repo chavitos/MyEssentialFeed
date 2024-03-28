@@ -1,5 +1,5 @@
 ![CI_Workflow](https://github.com/chavitos/MyEssentialFeed/actions/workflows/CI.yml/badge.svg)
-b
+
 # MyEssentialFeed
 My own impl of essential feed app.
 
